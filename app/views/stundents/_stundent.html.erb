@@ -1,0 +1,15 @@
+
+<div id="<%= "#{dom_id(stundent)}_container" %>">
+  <%= turbo_frame_tag dom_id(stundent) do%>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Name:</strong>
+      <%= stundent.name %>
+    </p>
+
+    <% if action_name != "show" %>
+      <%= link_to "Show this stundent", stundent, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+      <%= link_to 'Edit this stundent', edit_stundent_path(stundent), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+      <hr class="mt-6">
+    <% end %>
+  <%end%>
+</div>

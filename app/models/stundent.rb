@@ -1,0 +1,2 @@
+class Stundent < ApplicationRecord
+end
