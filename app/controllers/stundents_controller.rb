@@ -38,7 +38,7 @@ class StundentsController < ApplicationController
   def update
     respond_to do |format|
       if @stundent.update(stundent_params)
-        format.turbo_stream`
+        format.turbo_stream
         format.html { redirect_to stundent_url(@stundent), notice: "Stundent was successfully updated." }
         format.json { render :show, status: :ok, location: @stundent }
       else
